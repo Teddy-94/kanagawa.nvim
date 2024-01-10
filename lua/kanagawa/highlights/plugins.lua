@@ -46,7 +46,7 @@ function M.setup(colors, config)
         -- NvimTree
         NvimTreeNormal = { link = "Normal" },
         NvimTreeNormalNC = { link = "NvimTreeNormal" },
-        NvimTreeRootFolder = { fg = theme.syn.identifier, bold = true },
+        NvimTreeRootFolder = { fg = theme.syn.identifier, bold = false },
         NvimTreeGitDirty = { fg = theme.vcs.changed },
         NvimTreeGitNew = { fg = theme.vcs.added },
         NvimTreeGitDeleted = { fg = theme.vcs.removed },
@@ -56,16 +56,16 @@ function M.setup(colors, config)
         NvimTreeImageFile = { fg = theme.syn.special2 },
         NvimTreeSymlink = { link = "Type" },
         NvimTreeFolderName = { link = "Directory" },
-        NvimTreeExecFile = { fg = theme.syn.string, bold = true },
-        NvimTreeOpenedFile = { fg = theme.syn.special1, italic = true },
+        NvimTreeExecFile = { fg = theme.syn.string, bold = false },
+        NvimTreeOpenedFile = { fg = theme.syn.special1, italic = false },
         NvimTreeWinSeparator = { link = "WinSeparator" },
-        NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true },
+        NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = false },
         -- NeoTree
         NeoTreeTabInactive = { link = "TabLine" },
         NeoTreeTabActive = { link = "TabLineSel" },
         NeoTreeTabSeparatorInactive = { link = "NeoTreeTabInactive" },
         NeoTreeTabSeparatorActive = { link = "NeoTreeTabActive" },
-        NeoTreeRootName = { fg = theme.syn.identifier, bold = true },
+        NeoTreeRootName = { fg = theme.syn.identifier, bold = false },
         NeoTreeModified = { link = "String" },
         NeoTreeGitModified = { fg = theme.vcs.changed },
         NeoTreeGitAdded = { fg = theme.vcs.added },
@@ -111,7 +111,7 @@ function M.setup(colors, config)
         DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
         DapUIType = { link = "Type" }, -- guifg=#D484FF"
         -- DapUIValue = { link = "Normal" },
-        DapUIModifiedValue = { fg = theme.syn.special1, bold = true }, -- guifg=#00F1F5 gui=bold"
+        DapUIModifiedValue = { fg = theme.syn.special1, bold = false }, -- guifg=#00F1F5 gui=bold"
         DapUIDecoration = { fg = theme.ui.float.fg_border }, -- guifg=#00F1F5"
         DapUIThread = { fg = theme.syn.identifier }, --guifg=#A9FF68"
         DapUIStoppedThread = { fg = theme.syn.special1 }, --guifg=#00f1f5"
@@ -124,7 +124,7 @@ function M.setup(colors, config)
         DapUIWatchesError = { fg = theme.diag.error }, --guifg=#F70067"
         DapUIBreakpointsPath = { link = "Directory" }, --guifg=#00F1F5"
         DapUIBreakpointsInfo = { fg = theme.diag.info }, --guifg=#A9FF68"
-        DapUIBreakpointsCurrentLine = { fg = theme.syn.identifier, bold = true }, --guifg=#A9FF68 gui=bold"
+        DapUIBreakpointsCurrentLine = { fg = theme.syn.identifier, bold = false }, --guifg=#A9FF68 gui=bold"
         -- DapUIBreakpointsLine = {}, -- DapUILineNumber"
         DapUIBreakpointsDisabledLine = { link = "Comment" }, --guifg=#424242"
         -- DapUICurrentFrameName = {}, -- DapUIBreakpointsCurrentLine"

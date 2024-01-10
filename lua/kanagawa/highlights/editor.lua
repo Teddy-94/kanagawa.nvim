@@ -13,7 +13,7 @@ function M.setup(colors, config)
         -- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').
         Conceal = { fg = theme.ui.special, bold = true },
         -- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
-        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = false },
         -- Cursor		Character under the cursor.
         Cursor = { fg = theme.ui.bg, bg = theme.ui.fg },
         -- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
@@ -58,13 +58,13 @@ function M.setup(colors, config)
         -- LineNrAbove	Line number for when the 'relativenumber' option is set, above the cursor line.
         -- LineNrBelow	Line number for when the 'relativenumber' option is set, below the cursor line.
         -- CursorLineNr	Like LineNr when 'cursorline' is set and 'cursorlineopt' contains "number" or is "both", for the cursor line.
-        CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = true },
+        CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = false },
         -- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
         -- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
         -- MatchParen	Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-        MatchParen = { fg = theme.diag.warning, bold = true },
+        MatchParen = { fg = theme.diag.warning, bold = false },
         -- ModeMsg		'showmode' message (e.g., "-- INSERT --").
-        ModeMsg = { fg = theme.diag.warning, bold = true },
+        ModeMsg = { fg = theme.diag.warning, bold = false },
         -- MsgArea		Area for messages and cmdline.
         MsgArea = vim.o.cmdheight == 0 and {link = 'StatusLine'} or { fg = theme.ui.fg_dim },
         -- MsgSeparator	Separator for scrolled messages |msgsep|.

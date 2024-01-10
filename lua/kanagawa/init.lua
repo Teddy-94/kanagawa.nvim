@@ -9,10 +9,10 @@ local M = {}
 ---@class KanagawaConfig
 M.config = {
     undercurl = true,
-    commentStyle = { italic = true },
+    commentStyle = { italic = false },
     functionStyle = {},
-    keywordStyle = { italic = true },
-    statementStyle = { bold = true },
+    keywordStyle = { italic = false },
+    statementStyle = { bold = false },
     typeStyle = {},
     transparent = false,
     dimInactive = false,
@@ -24,7 +24,7 @@ M.config = {
     end,
     ---@type { dark: string, light: string }
     background = { dark = "wave", light = "lotus" },
-    theme = "wave",
+    theme = "dragon",
     compile = false,
 }
 
