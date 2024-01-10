@@ -29,7 +29,7 @@ function M.setup(colors, config)
         -- @string.regex                               ; regular expressions
         ["@string.regex"] = { fg = theme.syn.regex },
         -- @string.escape (SpecialChar)                ; escape sequences
-        ["@string.escape"] = { fg = theme.syn.regex, bold = true },
+        ["@string.escape"] = { fg = theme.syn.regex, bold = false },
         -- @string.special (SpecialChar)               ; other special strings (e.g. dates)
 
         -- @character (Character)                      ; character literals
@@ -60,7 +60,7 @@ function M.setup(colors, config)
         -- @keyword                                    ; various keywords
         -- @keyword.function                           ; keywords that define a function (e.g. `func` in Go, `def` in Python)
         -- @keyword.operator                           ; operators that are English words (e.g. `and` / `or`)
-        ["@keyword.operator"] = { fg = theme.syn.operator, bold = true },
+        ["@keyword.operator"] = { fg = theme.syn.operator, bold = false },
         -- @keyword.return                             ; keywords like `return` and `yield`
         ["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.keywordStyle),
         ["@keyword.luap"] = { link = "@string.regex" },
@@ -94,7 +94,7 @@ function M.setup(colors, config)
         -- @variable (Identifier)                      ; various variable names
         ["@variable"] = { fg = theme.ui.fg },
         -- @variable.builtin                           ; built-in variable names (e.g. `this`)
-        ["@variable.builtin"] = { fg = theme.syn.special2, italic = true },
+        ["@variable.builtin"] = { fg = theme.syn.special2, italic = false },
 
         -- @constant (Constant)                        ; constant identifiers
         -- @constant.builtin (Special)                 ; built-in constant values
@@ -108,9 +108,9 @@ function M.setup(colors, config)
         -- Text {{{
         -- @text                                       ; non-structured text
         -- @text.strong                                ; bold text
-        ["@text.strong"] = { bold = true },
+        ["@text.strong"] = { bold = false },
         -- @text.emphasis                              ; text with emphasis
-        ["@text.emphasis"] = { italic = true },
+        ["@text.emphasis"] = { italic = false },
         -- @text.underline (Underlined)                ; underlined text
         -- @text.strike                                ; strikethrough text
         -- @text.title (Title)                         ; text that is part of a title
@@ -130,11 +130,11 @@ function M.setup(colors, config)
 
         -- @text.todo (Todo)                           ; todo notes
         -- @text.note                                  ; info notes
-        ["@text.note"] = { fg = theme.ui.fg_reverse, bg = theme.diag.hint, bold = true },
+        ["@text.note"] = { fg = theme.ui.fg_reverse, bg = theme.diag.hint, bold = false },
         -- @text.warning                               ; warning notes
-        ["@text.warning"] = { fg = theme.ui.fg_reverse, bg = theme.diag.warning, bold = true },
+        ["@text.warning"] = { fg = theme.ui.fg_reverse, bg = theme.diag.warning, bold = false },
         -- @text.danger                                ; danger/error notes
-        ["@text.danger"] = { fg = theme.ui.fg, bg = theme.diag.error, bold = true },
+        ["@text.danger"] = { fg = theme.ui.fg, bg = theme.diag.error, bold = false },
 
         -- @text.diff.add                              ; added text (for diff files)
         ['@text.diff.add'] = { fg = theme.vcs.added },

@@ -20,7 +20,7 @@ function M.setup(colors, config)
         --  Number		a number constant: 234, 0xff
         Number = { fg = theme.syn.number },
         --  Boolean	a boolean constant: TRUE, false
-        Boolean = { fg = theme.syn.constant, bold = true },
+        Boolean = { fg = theme.syn.constant, bold = false },
         --  Float		a floating point constant: 2.3e10
         Float = { link = "Number" },
 
@@ -65,8 +65,8 @@ function M.setup(colors, config)
 
         -- *Underlined	text that stands out, HTML links
         Underlined = { fg = theme.syn.special1, underline = true },
-        Bold = { bold = true },
-        Italic = { italic = true },
+        Bold = { bold = false },
+        Italic = { italic = false },
 
         -- *Ignore		left blank, hidden  |hl-Ignore|
         Ignore = { link = "NonText" },
@@ -75,7 +75,7 @@ function M.setup(colors, config)
         Error = { fg = theme.diag.error },
 
         -- *Todo		anything that needs extra attention; mostly the keywords TODO FIXME WARNING and XXX
-        Todo = { fg = theme.ui.fg_reverse, bg = theme.diag.info, bold = true },
+        Todo = { fg = theme.ui.fg_reverse, bg = theme.diag.info, bold = false },
 
         qfLineNr = { link = "lineNr" },
         qfFileName = { link = "Directory" },
