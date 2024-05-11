@@ -9,7 +9,7 @@ function M.setup(colors, config)
         -- @variable                       various variable names
         ["@variable"] = { fg = theme.ui.fg },
         -- @variable.builtin (Special)     built-in variable names (e.g. `this`, `self`)
-        ["@variable.builtin"] = { fg = theme.syn.special2, italic = true },
+        ["@variable.builtin"] = { fg = theme.syn.special2, italic = false },
         -- @variable.parameter             parameters of a function
         ["@variable.parameter"] = { fg = theme.syn.parameter },
         -- @variable.parameter.builtin     special parameters (e.g. `_`, `it`)
@@ -29,7 +29,7 @@ function M.setup(colors, config)
         -- @string.regexp          regular expressions
         ["@string.regexp"] = { fg = theme.syn.regex },
         -- @string.escape          escape sequences
-        ["@string.escape"] = { fg = theme.syn.regex, bold = true },
+        ["@string.escape"] = { fg = theme.syn.regex, bold = false },
         -- @string.special         other special strings (e.g. dates)
         -- @string.special.symbol  symbols or atoms
         ["@string.special.symbol"] = { fg = theme.syn.identifier },
@@ -70,7 +70,7 @@ function M.setup(colors, config)
         -- @keyword.coroutine      keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
         -- @keyword.function       keywords that define a function (e.g. `func` in Go, `def` in Python)
         -- @keyword.operator       operators that are English words (e.g. `and`, `or`)
-        ["@keyword.operator"] = { fg = theme.syn.operator, bold = true },
+        ["@keyword.operator"] = { fg = theme.syn.operator, bold = false },
         -- @keyword.import         keywords for including modules (e.g. `import`, `from` in Python)
         ["@keyword.import"] = { link = "PreProc" },
         -- @keyword.type           keywords defining composite types (e.g. `struct`, `enum`)
