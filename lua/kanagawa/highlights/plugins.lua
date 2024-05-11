@@ -36,8 +36,8 @@ function M.setup(colors, config)
         -- Telescope
         TelescopeBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
         TelescopeTitle = { fg = theme.ui.special },
-        TelescopeSelection = { link = 'CursorLine' },
-        TelescopeSelectionCaret = { link = 'CursorLineNr' },
+        TelescopeSelection = { link = "CursorLine" },
+        TelescopeSelectionCaret = { link = "CursorLineNr" },
         TelescopeResultsClass = { link = "Structure" },
         TelescopeResultsStruct = { link = "Structure" },
         TelescopeResultsField = { link = "@field" },
@@ -108,34 +108,34 @@ function M.setup(colors, config)
         NotifyTRACETitle = { link = "Comment" },
         -- Dap-UI
         -- DapUIVariable = { link = "Normal" },
-        DapUIScope = { link = "Special" },                                        -- guifg=#00F1F5"
-        DapUIType = { link = "Type" },                                            -- guifg=#D484FF"
+        DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
+        DapUIType = { link = "Type" }, -- guifg=#D484FF"
         -- DapUIValue = { link = "Normal" },
-        DapUIModifiedValue = { fg = theme.syn.special1, bold = false },            -- guifg=#00F1F5 gui=bold"
-        DapUIDecoration = { fg = theme.ui.float.fg_border },                      -- guifg=#00F1F5"
-        DapUIThread = { fg = theme.syn.identifier },                              --guifg=#A9FF68"
-        DapUIStoppedThread = { fg = theme.syn.special1 },                         --guifg=#00f1f5"
+        DapUIModifiedValue = { fg = theme.syn.special1, bold = false }, -- guifg=#00F1F5 gui=bold"
+        DapUIDecoration = { fg = theme.ui.float.fg_border }, -- guifg=#00F1F5"
+        DapUIThread = { fg = theme.syn.identifier }, --guifg=#A9FF68"
+        DapUIStoppedThread = { fg = theme.syn.special1 }, --guifg=#00f1f5"
         -- DapUIFrameName = { link = "Normal"},
-        DapUISource = { fg = theme.syn.special2 },                                -- guifg=#D484FF"
-        DapUILineNumber = { fg = theme.syn.special1 },                            -- guifg=#00f1f5"
-        DapUIFloatBorder = { fg = theme.ui.float.fg_border },                     -- guifg=#00F1F5"
-        DapUIWatchesEmpty = { fg = theme.diag.error },                            -- guifg=#F70067"
-        DapUIWatchesValue = { fg = theme.syn.identifier },                        -- guifg=#A9FF68"
-        DapUIWatchesError = { fg = theme.diag.error },                            --guifg=#F70067"
-        DapUIBreakpointsPath = { link = "Directory" },                            --guifg=#00F1F5"
-        DapUIBreakpointsInfo = { fg = theme.diag.info },                          --guifg=#A9FF68"
+        DapUISource = { fg = theme.syn.special2 }, -- guifg=#D484FF"
+        DapUILineNumber = { fg = theme.syn.special1 }, -- guifg=#00f1f5"
+        DapUIFloatBorder = { fg = theme.ui.float.fg_border }, -- guifg=#00F1F5"
+        DapUIWatchesEmpty = { fg = theme.diag.error }, -- guifg=#F70067"
+        DapUIWatchesValue = { fg = theme.syn.identifier }, -- guifg=#A9FF68"
+        DapUIWatchesError = { fg = theme.diag.error }, --guifg=#F70067"
+        DapUIBreakpointsPath = { link = "Directory" }, --guifg=#00F1F5"
+        DapUIBreakpointsInfo = { fg = theme.diag.info }, --guifg=#A9FF68"
         DapUIBreakpointsCurrentLine = { fg = theme.syn.identifier, bold = false }, --guifg=#A9FF68 gui=bold"
         -- DapUIBreakpointsLine = {}, -- DapUILineNumber"
-        DapUIBreakpointsDisabledLine = { link = "Comment" },                      --guifg=#424242"
+        DapUIBreakpointsDisabledLine = { link = "Comment" }, --guifg=#424242"
         -- DapUICurrentFrameName = {}, -- DapUIBreakpointsCurrentLine"
-        DapUIStepOver = { fg = theme.syn.special1 },                              --guifg=#00f1f5"
-        DapUIStepInto = { fg = theme.syn.special1 },                              --guifg=#00f1f5"
-        DapUIStepBack = { fg = theme.syn.special1 },                              --guifg=#00f1f5"
-        DapUIStepOut = { fg = theme.syn.special1 },                               --guifg=#00f1f5"
-        DapUIStop = { fg = theme.diag.error },                                    --guifg=#F70067"
-        DapUIPlayPause = { fg = theme.syn.string },                               --guifg=#A9FF68"
-        DapUIRestart = { fg = theme.syn.string },                                 --guifg=#A9FF68"
-        DapUIUnavailable = { fg = theme.syn.comment },                            --guifg=#424242"
+        DapUIStepOver = { fg = theme.syn.special1 }, --guifg=#00f1f5"
+        DapUIStepInto = { fg = theme.syn.special1 }, --guifg=#00f1f5"
+        DapUIStepBack = { fg = theme.syn.special1 }, --guifg=#00f1f5"
+        DapUIStepOut = { fg = theme.syn.special1 }, --guifg=#00f1f5"
+        DapUIStop = { fg = theme.diag.error }, --guifg=#F70067"
+        DapUIPlayPause = { fg = theme.syn.string }, --guifg=#A9FF68"
+        DapUIRestart = { fg = theme.syn.string }, --guifg=#A9FF68"
+        DapUIUnavailable = { fg = theme.syn.comment }, --guifg=#424242"
         -- Floaterm
         FloatermBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
         -- NeoVim                         = {},
@@ -156,32 +156,33 @@ function M.setup(colors, config)
         CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
         CmpItemKindDefault = { fg = theme.syn.deprecated },
         CmpItemMenu = { fg = theme.syn.comment },
-        CmpItemKindVariable = { fg = theme.ui.fg_dim },
+
+        CmpItemKindText = { fg = theme.ui.fg },
+        CmpItemKindMethod = { link = "@function.method" },
         CmpItemKindFunction = { link = "Function" },
-        CmpItemKindMethod = { link = "Function" },
         CmpItemKindConstructor = { link = "@constructor" },
+        CmpItemKindField = { link = "@variable.member" },
+        CmpItemKindVariable = { fg = theme.ui.fg_dim },
         CmpItemKindClass = { link = "Type" },
         CmpItemKindInterface = { link = "Type" },
-        CmpItemKindStruct = { link = "Type" },
+        CmpItemKindModule = { link = "@module" },
         CmpItemKindProperty = { link = "@property" },
-        CmpItemKindField = { link = "@field" },
-        CmpItemKindEnum = { link = "Type" },
-        CmpItemKindSnippet = { fg = theme.syn.special1 },
-        CmpItemKindText = { fg = theme.ui.pmenu.fg },
-        CmpItemKindModule = { link = "@include" },
-        CmpItemKindFile = { link = "Directory" },
-        CmpItemKindFolder = { link = "Directory" },
-        CmpItemKindKeyword = { link = "@keyword" },
-        CmpItemKindTypeParameter = { link = "Type" },
-        CmpItemKindConstant = { link = "Constant" },
-        CmpItemKindOperator = { link = "Operator" },
-        CmpItemKindReference = { link = "Type" },
-        CmpItemKindEnumMember = { link = "Constant" },
+        CmpItemKindUnit = { link = "Number" },
         CmpItemKindValue = { link = "String" },
+        CmpItemKindEnum = { link = "Type" },
+        CmpItemKindKeyword = { link = "Keyword" },
+        CmpItemKindSnippet = { link = "Special" },
+        CmpItemKindColor = { link = "Special" },
+        CmpItemKindFile = { link = "Directory" },
+        CmpItemKindReference = { link = "Special" },
+        CmpItemKindFolder = { link = "Directory" },
+        CmpItemKindEnumMember = { link = "Constant" },
+        CmpItemKindConstant = { link = "Constant" },
+        CmpItemKindStruct = { link = "Type" },
+        CmpItemKindEvent = { link = "Type" },
+        CmpItemKindOperator = { link = "Operator" },
+        CmpItemKindTypeParameter = { link = "Type" },
         CmpItemKindCopilot = { link = "String" },
-        -- CmpItemKindUnit = {},
-        -- CmpItemKindEvent = {},
-        -- CmpItemKindColor = {},
 
         -- IndentBlankline
         IndentBlanklineChar = { fg = theme.ui.whitespace },
@@ -195,17 +196,21 @@ function M.setup(colors, config)
         -- Lazy
         LazyProgressTodo = { fg = theme.ui.nontext },
 
+        -- Trouble
+        TroubleIndent = { fg = theme.ui.whitespace },
+        TroublePos = { fg = theme.ui.special },
+
         -- Nvim-Navic
         NavicIconsFile = { link = "Directory" },
-        NavicIconsModule = { link = "TSInclude" },
-        NavicIconsNamespace = { link = "TSInclude" },
-        NavicIconsPackage = { link = "TSInclude" },
-        NavicIconsClass = { link = "Structure" },
-        NavicIconsMethod = { link = "Function" },
-        NavicIconsProperty = { link = "TSProperty" },
-        NavicIconsField = { link = "TSField" },
+        NavicIconsModule = { link = "@module" },
+        NavicIconsNamespace = { link = "@module" },
+        NavicIconsPackage = { link = "@module" },
+        NavicIconsClass = { link = "Type" },
+        NavicIconsMethod = { link = "@function.method" },
+        NavicIconsProperty = { link = "@property" },
+        NavicIconsField = { link = "@variable.member" },
         NavicIconsConstructor = { link = "@constructor" },
-        NavicIconsEnum = { link = "Identifier" },
+        NavicIconsEnum = { link = "Type" },
         NavicIconsInterface = { link = "Type" },
         NavicIconsFunction = { link = "Function" },
         NavicIconsVariable = { link = "@variable" },
@@ -215,15 +220,43 @@ function M.setup(colors, config)
         NavicIconsBoolean = { link = "Boolean" },
         NavicIconsArray = { link = "Type" },
         NavicIconsObject = { link = "Type" },
-        NavicIconsKey = { link = "Keyword" },
+        NavicIconsKey = { link = "Identifier" },
         NavicIconsNull = { link = "Type" },
-        NavicIconsEnumMember = { link = "TSField" },
+        NavicIconsEnumMember = { link = "Constant" },
         NavicIconsStruct = { link = "Structure" },
         NavicIconsEvent = { link = "Structure" },
         NavicIconsOperator = { link = "Operator" },
-        NavicIconsTypeParameter = { link = "Identifier" },
+        NavicIconsTypeParameter = { link = "Type" },
         NavicText = { fg = theme.ui.fg },
         NavicSeparator = { fg = theme.ui.fg },
+
+        -- Aerial icons
+        AerialFileIcon = { link = "Directory" },
+        AerialModuleIcon = { link = "@module" },
+        AerialNamespaceIcon = { link = "@module" },
+        AerialPackageIcon = { link = "@module" },
+        AerialClassIcon = { link = "Type" },
+        AerialMethodIcon = { link = "@function.method" },
+        AerialPropertyIcon = { link = "@property" },
+        AerialFieldIcon = { link = "@variable.member" },
+        AerialConstructorIcon = { link = "@constructor" },
+        AerialEnumIcon = { link = "Type" },
+        AerialInterfaceIcon = { link = "Type" },
+        AerialFunctionIcon = { link = "Function" },
+        AerialVariableIcon = { link = "@variable" },
+        AerialConstantIcon = { link = "Constant" },
+        AerialStringIcon = { link = "String" },
+        AerialNumberIcon = { link = "Number" },
+        AerialBooleanIcon = { link = "Boolean" },
+        AerialArrayIcon = { link = "Type" },
+        AerialObjectIcon = { link = "Type" },
+        AerialKeyIcon = { link = "Identifier" },
+        AerialNullIcon = { link = "Type" },
+        AerialEnumMemberIcon = { link = "Constant" },
+        AerialStructIcon = { link = "Structure" },
+        AerialEventIcon = { link = "Structure" },
+        AerialOperatorIcon = { link = "Operator" },
+        AerialTypeParameterIcon = { link = "Type" },
     }
 end
 
